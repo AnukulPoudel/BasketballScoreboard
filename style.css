@@ -39,7 +39,20 @@
     border-radius: 5px;
 }
 
-.container #scoreboard {
+.container #scoreboard_l {
+    display: flex;
+    justify-content: center;
+    font-family: 'Cursed Timer ULiL', Courier, monospace;
+    background-color: #080001;
+    height: 120px;
+    width: 152px;
+    color: #F94F6D;
+    font-weight: 400;
+    font-size: 90px;
+    line-height: 127px;
+    border: 1px solid #000000;
+}
+.container #scoreboard_r {
     display: flex;
     justify-content: center;
     font-family: 'Cursed Timer ULiL', Courier, monospace;
