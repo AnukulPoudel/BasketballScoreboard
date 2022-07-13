@@ -5,8 +5,94 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- since github refuses to load external css file -->
+    <style>
+        @import url('http://fonts.cdnfonts.com/css/cursed-timer-ulil');
+
+        * {
+            background-color: #1b244a;
+        }
+
+        .container {
+            font-family: 'Verdana';
+            font-style: normal;
+            color: #EEEEEE;
+            font-size: 40px;
+            display: flex;
+            gap: 100px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container span {
+            font-weight: 700;
+        }
+
+        .container .home {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 21px;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 5px;
+        }
+
+        .container .guest {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 21px;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 5px;
+        }
+
+        .container #scoreboard_l {
+            display: flex;
+            justify-content: center;
+            font-family: 'Cursed Timer ULiL', Courier, monospace;
+            background-color: #080001;
+            height: 120px;
+            width: 152px;
+            color: #F94F6D;
+            font-weight: 400;
+            font-size: 90px;
+            line-height: 127px;
+            border: 1px solid #000000;
+        }
+
+        .container #scoreboard_r {
+            display: flex;
+            justify-content: center;
+            font-family: 'Cursed Timer ULiL', Courier, monospace;
+            background-color: #080001;
+            height: 120px;
+            width: 152px;
+            color: #F94F6D;
+            font-weight: 400;
+            font-size: 90px;
+            line-height: 127px;
+            border: 1px solid #000000;
+        }
+
+        .container .buttons {
+            display: flex;
+            flex-direction: row;
+            gap: 11px;
+        }
+
+        .container button {
+            font-family: 'Cursed Timer ULiL', Courier, monospace;
+            color: white;
+            width: 45px;
+            height: 45px;
+            border-radius: 5px;
+            border: 2px solid rgb(255, 255, 255);
+        }
+    </style>
 </head>
 
 <body>
@@ -30,7 +116,45 @@
     </div>
 
 
-    <script src="script.js"></script>
+    <script src="script.js"></script>  
+    <!-- since github refuses to load external js file -->
+    <script>
+
+        let leftValue_ = document.getElementById("scoreboard_l");
+        let rightValue_ = document.getElementById("scoreboard_r");
+
+        let leftValue = Number(leftValue_.innerText);
+        let rightValue = Number(rightValue_.innerText);
+
+
+        // left one
+        function leftOne() {
+            leftValue += 1;
+            leftValue_.innerText = leftValue;
+        }
+        function leftTwo() {
+            leftValue += 2;
+            leftValue_.innerText = leftValue;
+        }
+        function leftThree() {
+            leftValue += 3;
+            leftValue_.innerText = leftValue;
+        }
+
+        //Right one
+        function rightOne() {
+            rightValue += 1;
+            rightValue_.innerText = rightValue;
+        }
+        function rightTwo() {
+            rightValue += 2;
+            rightValue_.innerText = rightValue;
+        }
+        function rightThree() {
+            rightValue += 3;
+            rightValue_.innerText = rightValue;
+        }
+    </script>
 </body>
 
 </html>
